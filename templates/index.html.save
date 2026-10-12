@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RISC Pipeline Simulator</title>
+
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #e6e6e6;
+            font-family: Consolas, monospace;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4aa3ff;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .pipeline-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 0 10px #000;
+        }
+
+        .stage {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            background: #262626;
+            border: 1px solid #333;
+        }
+
+        .hazard {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        .forward {
+            color: #4da6ff;
+            font-weight: bold;
+        }
+
+        .stall {
+            color: #c7c7c7;
+            font-weight: bold;
+        }
+
+        button {
+            background: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0099ff;
+        }
+
+        pre {
+            background: #111;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .status-box {
+            margin-top: 20px;
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>RISC Pipeline Simulator — Dark Theme</h1>
+
+<div class="pipeline-box">
+    <h2>Clock Cycle: <span id="clock">0</span></h2>
+
+    <div class="stage">
+        <h3>IF/EX Register</h3>
+        <pre id="if_ex">Waiting...</pre>
+    </div>
+
+    <div class="stage">
+        <h3>EX/WB Register</h3>
+        <pre id="ex_wb">Waiting...</pre>
+    </div>
+
+    <button onclick="nextCycle()">Next Cycle</button>
+
+    <div class="status-box">
+        <h3>Status</h3>
+        <p id="status">Ready.</p>
+    </div>
+</div>
+
+
+<script>
+function nextCycle() {
+    fetch("/next")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("clock").textContent = data.clock;
+            document.getElementById("if_ex").textContent = JSON.stringify(data.IF_EX, null, 2);
+            document.getElementById("ex_wb").textContent = JSON.stringify(data.EX_WB, null, 2);
+            document.getElementById("status").textContent = data.status;
+        });
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+

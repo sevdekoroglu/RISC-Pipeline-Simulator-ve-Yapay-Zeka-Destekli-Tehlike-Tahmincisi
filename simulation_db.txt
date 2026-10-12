@@ -1,0 +1,236 @@
+[SESSION] | 2025-12-24 18:50:47 | 20251224185047 | START | 
+[SESSION] | 2025-12-24 18:50:48 | 20251224185048 | START | 
+[SESSION] | 2025-12-24 18:50:58 | 20251224185058 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-24 18:51:01 | 20251224185058 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:03 | 20251224185058 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:03 | 20251224185058 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:04 | 20251224185058 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:04 | 20251224185058 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:04 | 20251224185058 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:05 | 20251224185058 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:05 | 20251224185058 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:05 | 20251224185058 | Cycle:9 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:05 | 20251224185058 | Cycle:10 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:06 | 20251224185058 | Cycle:11 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:51:06 | 20251224185058 | Cycle:12 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:51:11 | 20251224185111 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[SESSION] | 2025-12-24 18:51:57 | 20251224185157 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yaz
+[SESSION] | 2025-12-24 18:52:02 | 20251224185202 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yaz
+[SESSION] | 2025-12-24 18:52:03 | 20251224185203 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yaz
+[CYCLE_LOG] | 2025-12-24 18:52:09 | 20251224185203 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:12 | 20251224185203 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:12 | 20251224185203 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:12 | 20251224185203 | Cycle:4 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:13 | 20251224185203 | Cycle:5 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:13 | 20251224185203 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:13 | 20251224185203 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:52:13 | 20251224185203 | Cycle:8 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:52:15 | 20251224185215 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yaz
+[SESSION] | 2025-12-24 18:52:18 | 20251224185218 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yaz
+[SESSION] | 2025-12-24 18:52:54 | 20251224185254 | START | 
+[SESSION] | 2025-12-24 18:53:02 | 20251224185302 | START | ADD x1, x0, x0 ADD x2, x1, x1 SUB x3, x2, x1 LOAD x4, 100(x1) ADD x5, x4, x1
+[CYCLE_LOG] | 2025-12-24 18:53:04 | 20251224185302 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:06 | 20251224185302 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:06 | 20251224185302 | Cycle:3 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:06 | 20251224185302 | Cycle:4 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:07 | 20251224185302 | Cycle:5 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:07 | 20251224185302 | Cycle:6 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:07 | 20251224185302 | Cycle:7 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:07 | 20251224185302 | Cycle:8 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:08 | 20251224185302 | Cycle:9 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:08 | 20251224185302 | Cycle:10 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:08 | 20251224185302 | Cycle:11 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:08 | 20251224185302 | Cycle:12 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:09 | 20251224185302 | Cycle:13 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:09 | 20251224185302 | Cycle:14 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:53:25 | 20251224185325 | START | ADD x1, x0, x0 ADD x2, x1, x1 SUB x3, x2, x1 LOAD x4, 100(x1) ADD x5, x4, x1
+[SESSION] | 2025-12-24 18:53:27 | 20251224185327 | START | LOAD x1, 10        # Bellekten x1'e veri yükle AND  x2, x1, x1    # STALL! (x1 henüz hazır değil, AI bunu tahmin eder) OR   x3, x2, x0    # FORWARDING! (x2'yi bellekten değil ALU'dan alır) XOR  x4, x3, x1    # MANTIKSAL İŞLEM! (Karmaşık bit kontrolü)
+[CYCLE_LOG] | 2025-12-24 18:53:30 | 20251224185327 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:32 | 20251224185327 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:32 | 20251224185327 | Cycle:3 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:32 | 20251224185327 | Cycle:4 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:32 | 20251224185327 | Cycle:5 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:32 | 20251224185327 | Cycle:6 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:33 | 20251224185327 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:33 | 20251224185327 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:33 | 20251224185327 | Cycle:9 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:34 | 20251224185327 | Cycle:10 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:34 | 20251224185327 | Cycle:11 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:34 | 20251224185327 | Cycle:12 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:34 | 20251224185327 | Cycle:13 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:53:34 | 20251224185327 | Cycle:14 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:54:47 | 20251224185447 | START | 
+[SESSION] | 2025-12-24 18:54:47 | 20251224185447 | START | 
+[SESSION] | 2025-12-24 18:54:58 | 20251224185458 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[CYCLE_LOG] | 2025-12-24 18:55:00 | 20251224185458 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:02 | 20251224185458 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:02 | 20251224185458 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:02 | 20251224185458 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:02 | 20251224185458 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:03 | 20251224185458 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:03 | 20251224185458 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:03 | 20251224185458 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:55:03 | 20251224185458 | Cycle:9 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:56:58 | 20251224185658 | START | 
+[SESSION] | 2025-12-24 18:56:58 | 20251224185658 | START | 
+[SESSION] | 2025-12-24 18:57:12 | 20251224185712 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[CYCLE_LOG] | 2025-12-24 18:57:14 | 20251224185712 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:16 | 20251224185712 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:16 | 20251224185712 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:17 | 20251224185712 | Cycle:9 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:18 | 20251224185712 | Cycle:10 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:18 | 20251224185712 | Cycle:11 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:18 | 20251224185712 | Cycle:12 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:57:18 | 20251224185712 | Cycle:13 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-24 18:58:15 | 20251224185815 | START | 
+[SESSION] | 2025-12-24 18:58:15 | 20251224185815 | START | 
+[SESSION] | 2025-12-24 18:58:36 | 20251224185836 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[CYCLE_LOG] | 2025-12-24 18:58:40 | 20251224185836 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:41 | 20251224185836 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:42 | 20251224185836 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:42 | 20251224185836 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:42 | 20251224185836 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:42 | 20251224185836 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:43 | 20251224185836 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-24 18:58:43 | 20251224185836 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 10:38:28 | 20251225103828 | START | 
+[SESSION] | 2025-12-25 10:38:28 | 20251225103828 | START | 
+[SESSION] | 2025-12-25 10:39:35 | 20251225103935 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-25 10:39:52 | 20251225103935 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:39:54 | 20251225103935 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:39:55 | 20251225103935 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:39:56 | 20251225103935 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 10:44:18 | 20251225104418 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[SESSION] | 2025-12-25 10:44:21 | 20251225104421 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[SESSION] | 2025-12-25 10:44:23 | 20251225104423 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-25 10:44:27 | 20251225104423 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:44:29 | 20251225104423 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:44:31 | 20251225104423 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:44:35 | 20251225104423 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 10:46:51 | 20251225104651 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yazC
+[SESSION] | 2025-12-25 10:46:53 | 20251225104653 | START | ADD x1, x2, x3    // x2 ve x3'ü topla x1'e yaz SUB x4, x5, x6    // x5 ve x6'yı çıkar x4'e yaz AND x7, x8, x9    // x8 ve x9'u VE işlemine sok x7'ye yaz OR  x10, x11, x12 // x11 ve x12'yi VEYA işlemine sok x10'a yazC
+[CYCLE_LOG] | 2025-12-25 10:46:58 | 20251225104653 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:47:02 | 20251225104653 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 10:47:03 | 20251225104653 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 11:10:02 | 20251225111002 | START | 
+[SESSION] | 2025-12-25 11:10:02 | 20251225111002 | START | 
+[SESSION] | 2025-12-25 11:10:09 | 20251225111009 | START | LOAD x1, 100 ADD x2, x1, x3   # x1 henüz gelmediği için zorunlu STALL!
+[CYCLE_LOG] | 2025-12-25 11:10:14 | 20251225111009 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:16 | 20251225111009 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:17 | 20251225111009 | Cycle:3 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:19 | 20251225111009 | Cycle:4 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:20 | 20251225111009 | Cycle:5 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:20 | 20251225111009 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 11:10:22 | 20251225111009 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 13:37:50 | 20251225133750 | START | 
+[SESSION] | 2025-12-25 13:37:50 | 20251225133750 | START | 
+[SESSION] | 2025-12-25 13:38:08 | 20251225133808 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[CYCLE_LOG] | 2025-12-25 13:38:11 | 20251225133808 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:13 | 20251225133808 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:14 | 20251225133808 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:14 | 20251225133808 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:14 | 20251225133808 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:14 | 20251225133808 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:15 | 20251225133808 | Cycle:7 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:15 | 20251225133808 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:15 | 20251225133808 | Cycle:9 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:38:15 | 20251225133808 | Cycle:10 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 13:57:19 | 20251225135719 | START | 
+[SESSION] | 2025-12-25 13:57:42 | 20251225135742 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[SESSION] | 2025-12-25 13:57:52 | 20251225135752 | START | LOAD x1, 15        # x1 = 15  (İkili: 0000 1111) LOAD x2, 10        # x2 = 10  (İkili: 0000 1010) AND x3, x1, x2     # x3 = 10  (İkili: 0000 1010) -> İkisinde de olan bitler OR  x4, x1, x2     # x4 = 15  (İkili: 0000 1111) -> Herhangi birinde olan bitler XOR x5, x3, x4     # x5 = 5   (İkili: 0000 0101) -> Farklı olan bitler SUB x6, x4, x3     # x6 = 5   (x4 - x3 işlemi)
+[CYCLE_LOG] | 2025-12-25 13:57:58 | 20251225135752 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:58:48 | 20251225135752 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:58:48 | 20251225135752 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:58:49 | 20251225135752 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 13:58:49 | 20251225135752 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 14:23:45 | 20251225142345 | START | 
+[SESSION] | 2025-12-25 14:57:22 | 20251225145722 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[SESSION] | 2025-12-25 14:58:13 | 20251225145813 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-25 14:58:20 | 20251225145813 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:05 | 20251225145813 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:06 | 20251225145813 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:06 | 20251225145813 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:07 | 20251225145813 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:18 | 20251225145813 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:26 | 20251225145813 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 14:59:57 | 20251225145813 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:24 | 20251225145813 | Cycle:9 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:24 | 20251225145813 | Cycle:10 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:31 | 20251225145813 | Cycle:11 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:32 | 20251225145813 | Cycle:12 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:33 | 20251225145813 | Cycle:13 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:33 | 20251225145813 | Cycle:14 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:34 | 20251225145813 | Cycle:15 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:34 | 20251225145813 | Cycle:16 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:00:35 | 20251225145813 | Cycle:17 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 15:00:59 | 20251225150059 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-25 15:01:10 | 20251225150059 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:10 | 20251225150059 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:11 | 20251225150059 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:11 | 20251225150059 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:12 | 20251225150059 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:13 | 20251225150059 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:14 | 20251225150059 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:14 | 20251225150059 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:14 | 20251225150059 | Cycle:9 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:15 | 20251225150059 | Cycle:10 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:15 | 20251225150059 | Cycle:11 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:15 | 20251225150059 | Cycle:12 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:16 | 20251225150059 | Cycle:13 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:17 | 20251225150059 | Cycle:14 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:17 | 20251225150059 | Cycle:15 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:18 | 20251225150059 | Cycle:16 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:19 | 20251225150059 | Cycle:17 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:20 | 20251225150059 | Cycle:18 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:22 | 20251225150059 | Cycle:19 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:23 | 20251225150059 | Cycle:20 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:23 | 20251225150059 | Cycle:21 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:25 | 20251225150059 | Cycle:22 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:26 | 20251225150059 | Cycle:23 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:26 | 20251225150059 | Cycle:24 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:26 | 20251225150059 | Cycle:25 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:27 | 20251225150059 | Cycle:26 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:27 | 20251225150059 | Cycle:27 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:28 | 20251225150059 | Cycle:28 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:28 | 20251225150059 | Cycle:29 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:28 | 20251225150059 | Cycle:30 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:29 | 20251225150059 | Cycle:31 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:29 | 20251225150059 | Cycle:32 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:30 | 20251225150059 | Cycle:33 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:30 | 20251225150059 | Cycle:34 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:31 | 20251225150059 | Cycle:35 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:01:32 | 20251225150059 | Cycle:36 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-25 15:08:57 | 20251225150857 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (ForwardingLOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[SESSION] | 2025-12-25 15:08:59 | 20251225150859 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-25 15:09:04 | 20251225150859 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:05 | 20251225150859 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:06 | 20251225150859 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:06 | 20251225150859 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:06 | 20251225150859 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:07 | 20251225150859 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:08 | 20251225150859 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:09 | 20251225150859 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:10 | 20251225150859 | Cycle:9 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:11 | 20251225150859 | Cycle:10 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-25 15:09:11 | 20251225150859 | Cycle:11 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-29 13:46:57 | 20251229134657 | START | 
+[SESSION] | 2025-12-29 13:46:58 | 20251229134658 | START | 
+[SESSION] | 2025-12-29 13:48:00 | 20251229134800 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)
+[CYCLE_LOG] | 2025-12-29 13:48:03 | 20251229134800 | Cycle:1 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:09 | 20251229134800 | Cycle:2 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:09 | 20251229134800 | Cycle:3 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:10 | 20251229134800 | Cycle:4 | Hazard:RAW | Pred:LOAD_USE | Stall:True | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:11 | 20251229134800 | Cycle:5 | Hazard:NONE | Pred:LOAD_USE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:22 | 20251229134800 | Cycle:6 | Hazard:NONE | Pred:NONE | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:30 | 20251229134800 | Cycle:7 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:31 | 20251229134800 | Cycle:8 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:32 | 20251229134800 | Cycle:9 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:39 | 20251229134800 | Cycle:10 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:40 | 20251229134800 | Cycle:11 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[CYCLE_LOG] | 2025-12-29 13:48:41 | 20251229134800 | Cycle:12 | Hazard:RAW | Pred:RAW | Stall:False | CPI:0 | StallRate:%0
+[SESSION] | 2025-12-29 13:48:43 | 20251229134843 | START | LOAD x1, 100 LOAD x2, 200 ADD x3, x1, x2     # x3 = 300 (Burada hesaplanıyor) AND x4, x3, x1     # x3 henüz WB aşamasına gitmedi! (Forwarding burada devreye girer) OR  x5, x4, x2     # x4'e bağımlılık var (Forwarding)

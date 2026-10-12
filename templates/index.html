@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RISC Pipeline Simulator</title>
+    <style>
+        body { background-color: #0d0d0d; color: #e6e6e6; font-family: Consolas, monospace; padding: 20px; }
+        h1 { color: #4aa3ff; text-align: center; }
+        .pipeline-box { background: #1a1a1a; padding: 20px; border-radius: 12px; max-width: 900px; margin: auto; box-shadow: 0 0 15px #000; }
+        .stage { padding: 15px; margin: 10px 0; border-radius: 8px; background: #262626; border: 1px solid #333; }
+        textarea { width: 100%; background: #111; color: #4aa3ff; border: 1px solid #444; padding: 10px; border-radius: 6px; }
+        .button-group { display: flex; gap: 10px; margin: 10px 0; }
+        button { padding: 12px 20px; border-radius: 6px; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn-load { background: #28a745; color: white; }
+        .btn-next { background: #007acc; color: white; width: 100%; font-size: 16px; }
+        .btn-reset { background: #dc3545; color: white; }
+        pre { background: #111; padding: 10px; border-radius: 6px; color: #d4d4d4; border: 1px solid #222; white-space: pre-wrap; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+
+<h1>RISC Pipeline Simulator</h1>
+
+<div class="pipeline-box">
+    <div class="input-section">
+        <h3>Assembly Program Input</h3>
+        <textarea id="assemblyCode" rows="6" placeholder="Örnek:
+LOAD x1, 10
+LOAD x2, 5
+ADD x3, x1, x2"></textarea>
+        
+        <div class="button-group">
+            <button class="btn-load" onclick="loadProgram()">1. Programı Yükle</button>
+            <button class="btn-reset" onclick="resetSimulation()">Sıfırla (Reset)</button>
+        </div>
+    </div>
+
+    <h2>Clock Cycle: <span id="clock" style="color: #4aa3ff;">0</span></h2>
+
+    <div class="stage">
+        <h3>IF/EX Register</h3>
+        <pre id="if_ex">Waiting for program...</pre>
+    </div>
+
+    <div class="stage">
+        <h3>EX/WB Register</h3>
+        <pre id="ex_wb">Waiting for program...</pre>
+    </div>
+
+    <div class="stage">
+        <h3>Register File (R0-R31)</h3>
+        <pre id="registers">Waiting...</pre>
+    </div>
+
+    <div class="stage">
+        <h3>Hazard & AI Info</h3>
+        <pre id="hazard_box">Waiting...</pre>
+    </div>
+
+    <div class="stage" style="border: 1px solid #4aa3ff;">
+        <h3>AI Performance Prediction</h3>
+        <pre id="ai_box">CPI: 0 | Stall Rate: %0</pre>
+    </div>
+
+    <button class="btn-next" onclick="nextCycle()">Next Cycle (İlerlet)</button>
+</div>
+
+<script>
+    function loadProgram() {
+        const code = document.getElementById('assemblyCode').value;
+        if(!code.trim()) { alert("Lütfen kod girin!"); return; }
+
+        fetch("/load_code", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code: code })
+        })
+        .then(res => res.json())
+        .then(data => alert("Program yüklendi! Şimdi Next Cycle'a basabilirsin."));
+    }
+
+    function nextCycle() {
+        fetch("/next")
+            .then(res => res.json())
+            .then(data => {
+                // HTML elemanlarını güncelle
+                document.getElementById("clock").innerText = data.clock;
+                document.getElementById("if_ex").innerText = JSON.stringify(data.IF_EX, null, 2);
+                document.getElementById("ex_wb").innerText = JSON.stringify(data.EX_WB, null, 2);
+                document.getElementById("registers").innerText = JSON.stringify(data.registers, null, 2);
+                document.getElementById("hazard_box").innerText = JSON.stringify(data.hazard, null, 2);
+                
+                // Performans metriklerini güncelle
+                if (data.metrics) {
+                    document.getElementById("ai_box").innerText = 
+                        `Prediction: ${data.ai_prediction || 'NONE'} | CPI: ${data.metrics.CPI} | Stall Rate: %${data.metrics.Stall_Rate}`;
+                }
+            })
+            .catch(err => console.error("Hata:", err));
+    }
+
+    function resetSimulation() {
+        fetch("/reset")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("clock").innerText = "0";
+                document.getElementById("if_ex").innerText = "Waiting...";
+                document.getElementById("ex_wb").innerText = "Waiting...";
+                alert("Simülasyon sıfırlandı!");
+            });
+    }
+</script>
+</body>
+</html>
